@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit {
+  characters = [
+    {name: 'Luke Skywalker', side: ''},
+    {name: 'Darth Vader', side: ''}
+  ];
 
   constructor() { }
 
