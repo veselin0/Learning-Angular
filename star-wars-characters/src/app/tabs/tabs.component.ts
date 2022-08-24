@@ -9,7 +9,7 @@ import { StarWarsService } from '../star-wars.service';
   providers: [StarWarsService]
 })
 export class TabsComponent implements OnInit {
-  characters = [];
+  characters: any = [];
   chosenList = 'all';
   swService: StarWarsService;
 
@@ -29,10 +29,5 @@ export class TabsComponent implements OnInit {
     return this.characters;
   };
 
-  onSideChosen(charInfo: { name: string; side: string }) {
-    const pos = this.characters.findIndex((char: string) => {
-      // return char.name === charInfo.name;
-    });
-    // this.characters[pos].side = charInfo.side;
-  }
+
 }
