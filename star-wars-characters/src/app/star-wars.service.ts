@@ -1,4 +1,5 @@
 export class StarWarsService {
+  [x: string]: any;
   private characters = [
     {name: 'Luke Skywalker', side: ''},
     {name: 'Darth Vader', side: ''},
