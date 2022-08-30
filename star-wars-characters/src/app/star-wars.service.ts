@@ -12,7 +12,7 @@ export class StarWarsService {
 
   constructor(logService: LogService) {
     this.logService = logService;
-   };
+  };
 
   getCharacters(chosenList: string) {
     if (chosenList === 'all') {
@@ -31,5 +31,10 @@ export class StarWarsService {
     );
     this.characters[pos].side = charInfo.side;
     this.logService.writeLog('Changed side of ' + charInfo.name + ' to ' + charInfo.side);
+  }
+
+  addCharacter(name: string, side: string) {
+    const newChar = { name, side };
+    this.characters.push(newChar);
   }
 }
